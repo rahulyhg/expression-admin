@@ -6,7 +6,7 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
     return {
         // This is a demo Service for POST Method.
         doLogin: function (data, id, callback) {
-            $http.post(adminurl + 'Dealer/login', {
+            $http.post(adminurl + 'User/adminLogin', {
                 mobile: data.mobile,
                 password: data.password,
                 tableId: data.tableId,
@@ -16,7 +16,7 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
             });
         },
         connectSocket: function (accessToken, socketIds, callback) {
-            $http.post(adminurl + 'Dealer/connectSocket', {
+            $http.post(adminurl + 'User/connectSocket', {
                 accessToken: accessToken,
                 socketId: socketIds
             }).then(function (data) {

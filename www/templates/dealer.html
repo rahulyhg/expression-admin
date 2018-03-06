@@ -2,7 +2,7 @@
   <ion-content>
     <div class="centerDiv">
       <div class="row">
-        <div class="col col-11" ng-repeat="player in playersChunk | orderBy:'player.playerNo'" ng-if="player">
+        <div class="col col-11" ng-repeat="player in playersChunk | orderBy:'playerNo'" ng-if="player">
           <player ng-player="player"></player>
         </div>
       </div>
